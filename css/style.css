@@ -1,6 +1,182 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/*===================================================
+Font
+===================================================*/
+
+@font-face {
+    font-family: 'nexa';
+    src: url('../font/nexa_light-webfont.woff2') format('woff2'),
+         url('../font/nexa_light-webfont.woff') format('woff');
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'nexa';
+    src: url('../font/nexa_w01_regular-webfont.woff2') format('woff2'),
+         url('../font/nexa_w01_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'nexa';
+    src: url('../font/nexa_bold-webfont.woff2') format('woff2'),
+         url('../font/nexa_bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*===================================================
+Base CSS
+===================================================*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
 *{
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 body{
-	font-size: 1em;
+    font-size: 1em;
+    font-family: "nexa";
+}
+
+p{
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+h1,h2,h3,h4{
+    font-weight: bold;
+}
+
+h1{
+    font-size: 2em;
+}
+h2{
+    font-size: 1.414em;
+}
+h3{
+    font-size: 1.155em;
+}
+h4{
+    font-size: 1em
+}
+
+.container {
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 80%;
+    margin: auto;
+}
+
+/*===================================================
+Header
+===================================================*/
+header {
+    background-color:lightgrey;
+    width: 100%;
+}
+
+header h1 {
+    border: 1px solid;
+    flex: 2;
+    order: 1;
+}
+
+header nav {
+    border: 1px solid;
+    flex: 2;
+    order: 2;
+}
+
+header figure {
+    border: 1px solid;
+    flex: 1 100%;
+    order: 2;
+}
+
+
+/*===================================================
+Detail pagina
+===================================================*/
+#detail article {
+    max-width: 60em;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    columns: 3;
+    -webkit-column-gap: 2em;
+    -moz-column-gap: 2em;
+    column-gap: 2em;
+}
+/*===================================================
+Responsive
+===================================================*/
+
+/* ===== == = === 20em (320px) === = == ===== */
+
+@media only screen and (max-width : 20em) {
+}
+
+/* ===== == = === 30em (480px) === = == ===== */
+
+@media only screen and (max-width : 30em) {
+
+}
+
+/* ===== == = === 37.5em (600px) === = == ===== */
+
+@media only screen and (max-width: 37.5em) {
+    header h1 {
+        flex: 1 100%;
+    }
+    header nav {
+        flex: 1 100%;
+    }
+}
+
+/* ===== == = === 48em (768px) === = == ===== */
+
+@media only screen and (max-width : 48em) {
+
+
+}
+
+/* ===== == = === 56.25em (900px) === = == ===== */
+
+@media only screen and (max-width : 56.25em) {
+}
+
+/* ===== == = === 68.75em (1100px) === = == ===== */
+
+@media only screen and (max-width : 68.75em) {
+}
+
+/* ===== == = === 81.25em (1300px) === = == ===== */
+
+@media only screen and (max-width : 81.25em) {
 }
