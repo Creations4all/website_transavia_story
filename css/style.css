@@ -6,7 +6,6 @@
 /*===================================================
 Font
 ===================================================*/
-
 @font-face {
     font-family: 'nexa';
     src: url('../font/nexa_light-webfont.woff2') format('woff2'),
@@ -32,7 +31,6 @@ Font
 /*===================================================
 Base CSS
 ===================================================*/
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -53,37 +51,48 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
-
-*{
+* {
     box-sizing: border-box;
 }
-body{
+body {
     font-size: 1em;
     font-family: "nexa";
+    color: #333;
 }
-
-p{
+p {
     line-height: 1.5em;
     margin-bottom: 1em;
 }
-
-h1,h2,h3,h4{
+h1,h2,h3,h4 {
     font-weight: bold;
 }
-
-h1{
+h1 {
     font-size: 1.875em;
 }
-h2{
+h2 {
     font-size: 1.500em;
 }
-h3{
+h3 {
     font-size: 1.250em;
 }
-h4{
+h4 {
     font-size: 1em
 }
-
+.btn_pink {
+    font-size: 1em;
+    padding: .75em 2em;
+    background: #FF3268;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5em;
+    box-shadow: inset 0 -3px 2px 0 rgba(0,0,0,0.35);
+    transition: all 0.3s ease-out;
+    border: none;
+}
+.btn_pink:hover {
+    transition: all 0.3s ease-out;
+    background: #FF658E;
+}
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -92,14 +101,18 @@ h4{
     padding: 3.750em 0 0 0;
 }
 
-@media only screen and (min-width : 48em) {
-    .container{
-        width: 80%;
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 0;
+    @media only screen and (min-width : 48em) {
+        .container {
+            padding: 0;
+        }
     }
-}
+    @media only screen and (min-width : 60em) {
+        .container {
+            width: 90%;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+    }
 
 /*===================================================
 Header
@@ -115,7 +128,7 @@ header {
     position: fixed;
     z-index: 999;
 }
-header .container{
+header .container {
     padding: 0;
 }
 header .logo {
@@ -124,11 +137,13 @@ header .logo {
     padding: 0 0 0 1%;
     display: flex;
 }
-    @media only screen and (min-width : 48em) {
+
+    @media only screen and (min-width : 56.25em) {
         header .logo {
             padding: 0;
         }
     }
+
 header .logo a {
     display: flex;
     align-self: center;
@@ -152,7 +167,7 @@ header nav ul {
     height: 100%;
 }
 header nav ul li {
-    height: 100%;
+    height: 3.7em;
     width: 5em;
     border-left: 1px solid #E2E2E2;
     text-align: center;
@@ -170,6 +185,11 @@ header nav ul li a {
     padding: 47% 0 0 0;
     color: #2800A0;
     font-weight: bold;
+    transition: all 0.3s ease-out;
+}
+header nav ul li a:hover {
+    color: #0dd373;
+    transition: all 0.3s ease-out;
 }
 header nav ul li a:before {
     position: absolute;
@@ -189,6 +209,9 @@ header nav ul li:last-child a:before {
     font-size: 2.7em;
     top: 9%;
 }
+header nav ul li.home:first-child a:before {
+    content: '\f175';
+}
 
 /*===================================================
 Head image
@@ -200,12 +223,13 @@ figure.head {
     overflow: hidden;
     z-index: 1;
 }
+
     @media only screen and (min-width : 48em) {
         figure.head {
             display: flex;
             height: 20em;
         }
-        figure.head img{
+        figure.head img {
             min-height: 100%;
             width: auto;
             position: absolute;
@@ -214,17 +238,17 @@ figure.head {
             transform: translate(-50%, -50%);
         }
     }
-    @media only screen and (min-width : 56.25em) {
-        figure.head{
+    @media only screen and (min-width : 60em) {
+        figure.head {
             height: 25em;
         }
-        figure.head img{
+        figure.head img {
             top: 45%;
             left: 60%;
         }
     }
     @media only screen and (min-width : 95em) {
-        figure.head img{
+        figure.head img {
             top: 50%;
             left: 50%;
         }
@@ -234,43 +258,61 @@ figure.head {
 aside
 ===================================================*/
 aside {
-    width: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
+    @media only screen and (min-width : 60em) {
+        aside {
+            width: 25%;
+            border-left: 1px solid #e2e2e2;
+            border-right: 1px solid #e2e2e2;
+            position: relative;
+            z-index: 100;
+            flex-direction: column;
+        }
+    }
 
 /*===================================================
 aside navigation
 ===================================================*/
-
 aside nav {
     position: fixed;
     bottom: 0;
     width: 100%;
     background: #fff;
-    height: 3.750em;
     border-top: 1px solid #e2e2e2;
-}
-    @media only screen and (min-width : 56.25em) {
-        aside nav {
-            position: relative;
-            height: auto;
-        }
-    }
-aside nav ul {
-    display: flex;
-    justify-content: flex-start;
-    list-style: none;
-    height: 100%;
-    flex-wrap: wrap;
+    z-index: 999;
 }
 
+    @media only screen and (min-width : 60em) {
+        aside nav {
+            position: relative;
+            border:none;
+        }
+    }
+
+aside nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    list-style: none;
+    flex-wrap: wrap;
+    border-bottom: none;
+    height: 100%;
+}
 aside nav ul li {
     width: 33.33%;
+    font-size: 1em;
     text-align: center;
     height: 100%;
+    padding: 0;
     border-left: 1px solid #E2E2E2;
 }
-    @media only screen and (min-width : 56.25em) {
+
+    @media only screen and (min-width : 60em) {
         aside nav ul li {
             width: 100%;
             border-left: none;
@@ -279,6 +321,7 @@ aside nav ul li {
             height: 4em;
         }
     }
+
 aside nav ul li:first-child {
     border-left: none;
 }
@@ -291,7 +334,6 @@ aside nav ul li:nth-child(2) a {
 aside nav ul li:nth-child(3) a {
     color: #2800A0;
 }
-
 aside nav ul li a {
     display: block;
     width: 100%;
@@ -301,9 +343,14 @@ aside nav ul li a {
     text-decoration: none;
     font-size: inherit;
     position: relative;
+    transition: all 0.3s ease-out;
+}
+aside nav ul li a:hover {
+    background: #f3f3f3;
+    transition: all 0.3s ease-out;
 }
 
-        @media only screen and (min-width : 56.25em) {
+        @media only screen and (min-width : 60em) {
             aside nav ul li a {
                 padding: 1em 1em 1em 3em;
                 text-transform: inherit;
@@ -320,7 +367,8 @@ aside nav li a:before {
     font-weight: normal;
     font-family: 'Material-Design-Iconic-Font';
 }
-    @media only screen and (min-width : 56.25em) {
+
+    @media only screen and (min-width : 60em) {
         aside nav li a:before {
             box-sizing: border-box;
             font-size: 1.250em;
@@ -333,7 +381,8 @@ aside nav li a:before {
 aside nav li:nth-child(1) a:before {
     content: '\f335';
 }
-    @media only screen and (min-width : 56.25em) {
+
+    @media only screen and (min-width : 60em) {
         aside nav li:nth-child(1) a:before {
             font-size: 1.500em;
         }
@@ -345,7 +394,7 @@ aside nav li:nth-child(2) a:before {
     top: 10%;
 }
 
-    @media only screen and (min-width : 56.25em) {
+    @media only screen and (min-width : 60em) {
         aside nav li:nth-child(2) a:before {
             top: 25%;
             font-size: 1.400em;
@@ -358,29 +407,532 @@ aside nav li:nth-child(3) a:before {
     top: 8%;
 }
 
-    @media only screen and (min-width : 56.25em) {
+    @media only screen and (min-width : 60em) {
         aside nav li:nth-child(3) a:before {
             top: 23%;
             font-size: 1.700em;
         }
     }
 
+aside ul{
+    display: flex;
+    list-style: none;
+    border-bottom: 1px solid #dedede;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+    @media only screen and (min-width : 60em) {
+        aside ul{
+            border: none;
+            position: inherit;
+        }
+    }
+
+aside ul li {
+    width: 50%;
+    font-size: 1.250em;
+    font-weight: bold;
+    border-left: 1px solid #dedede;
+}
+
+    @media only screen and (min-width : 60em) {
+        aside ul li {
+            width:100%;
+            border-left:none;
+        }
+    }
+
+/*===================================================
+Aside dropdonw navigation
+===================================================*/
+aside section#dropdownright ul {
+    display: none;
+}
+
+aside section {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    border-bottom: 1px solid #e2e2e2;
+    cursor: pointer;
+}
+
+    @media only screen and (min-width : 60em) {
+        aside section{
+            padding: 0;
+            width:100%;
+        }
+    }
+
+aside section:first-of-type {
+    border-right: 1px solid #e2e2e2;
+}
+
+    @media only screen and (min-width : 60em) {
+        aside section i, aside section h3 {
+            padding: 1em;
+        }
+
+        aside section:first-of-type {
+            border-right: none;
+        }
+    }
+
+aside section legend,
+aside section div#downleft{
+    display: none;
+    width: 100%;
+}
+aside section i:before {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+aside section i{
+    transition: all 0.3s ease-out;
+}
+aside section.active i{
+    transition: all 0.3s ease-out;
+    transform: rotate(+45deg);
+}
+aside section div,
+aside section ul {
+    position: absolute;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    top: 7.4em;
+    z-index: 10;
+}
+
+    @media only screen and (min-width: 48em){
+        aside section div,
+        aside section ul {
+            top: 23.6em;
+        }
+    }
+
+    @media only screen and (min-width: 60em){
+        aside section div,
+        aside section ul {
+            position: relative;
+            top: 0;
+            border-top: 1px solid #e2e2e2;
+            background: #F3E5D8;
+        }
+    }
+
+aside section ul li {
+    width: 100%;
+    border-bottom: 1px solid #e2e2e2;
+}
+aside section ul li a {
+    text-decoration: none;
+    font-size: 0.8em;
+    position: relative;
+    font-weight: normal;
+    color:#333;
+    display: block;
+    padding: 1em 2.5em;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-out;
+}
+aside section ul li a:after {
+    font-family: 'Material-Design-Iconic-Font';
+    content: '\f2fb';
+    position: absolute;
+    right: 2em;
+    font-size: 1.4em;
+    top: 0.6em;
+    }
+
+aside section ul li a:hover{
+    transition: all 0.3s ease-out;
+    background-color: #fff6ed;
+
+}
+aside section ul li:last-child {
+    border-bottom: none;
+}
+aside section div form fieldset {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+aside section div form fieldset label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2em 3em;
+    font-size: 0.9em;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+    @media only screen and (min-width: 60em){
+        aside section ul li,
+        aside section div form fieldset label {
+            border-bottom: 1px solid #fff6ed;
+        }
+    }
 
 /*===================================================
 main
 ===================================================*/
-
 main {
-    width: 75%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+    @media only screen and (min-width : 60em) {
+        main{
+            width: 75%;
+            padding: 0.5em;
+        }
+    }
+
+/*===================================================
+section aanbevolen voor jou
+===================================================*/
+main section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+main section:first-of-type {
+    background: #F3E5D8;
+}
+    @media only screen and (min-width : 60em) {
+        main section:first-of-type{
+            background-color:#fff;
+        }
+    }
+
+main section h2 {
+    color: #0dd373;
+    padding: 0.5em 0 0.5em 0.5em;
+    width: 100%;
+}
+main section:first-of-type h2 {
+    color: #2800a0;
+}
+
+/*===================================================
+articles
+===================================================*/
+main section article {
+    border-radius: 0.750em;
+    margin: 0 0 1.5em 0;
+    position: relative;
+    width: 100%;
+    padding: 0.5em;
+}
+
+    @media only screen and (min-width: 37.5em) {
+        main section article{
+            width: 50%;
+        }
+    }
+
+    @media only screen and (min-width : 70em) {
+        main section article{
+            width: 33.33%;
+        }
+
+        main section:first-of-type article{
+            width: 50%;
+        }
+    }
+
+main section article p,
+main section article h3 {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+main article figure {
+    width: 100%;
+    height: 10em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 0.7em 0.7em 0 0;
+}
+main section article figure a {
+    z-index: 1;
+    color: #fff;
+    position: absolute;
+    right: 1em;
+    height: 2em;
+    width: 1em;
+    display: block;
+    top: 1em;
+    visibility: hidden;
+    text-decoration: none;
+}
+main section article figure a:before {
+    font-family: 'Material-Design-Iconic-Font';
+    content: '\f11d';
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-indent: 0%;
+    font-size: 1.6em;
+    visibility: visible;
+}
+main article figure img {
+    min-height: 100%;
+    width: 110%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+main section article h3 {
+    padding: 0.7em;
+    color: #2800a0;
+    background: rgba(255,255,255,0.7);
+}
+main section article p {
+    padding: 0 1em 1em 1em;
+    margin: 0;
+    font-size: 0.9em;
+    background: rgba(255,255,255,0.7);
+}
+
+    @media only screen and (min-width: 37.5em) {
+        main section article p{
+            height:6.5em;
+        }
+    }
+
+    @media only screen and (min-width: 37.5em) {
+        main section article p{
+            height:5.5em;
+        }
+    }
+
+main section article ul {
+    display: flex;
+    list-style: none;
+    background: rgba(255,255,255,0.7);
+    border: 1px solid #ccc;
+    border-radius: 0 0 0.7em 0.7em;
+}
+main section article ul li {
+    border-left: 1px solid #e2e2e2;
+}
+main section article ul li:nth-child(1) {
+    width: 25%;
+    border-left:none;
+}
+main section article ul li:nth-child(2) {
+    width: 25%;
+}
+main section article ul li:nth-child(3) {
+    width: 50%;
+    position: relative;
+}
+main section article ul li a {
+    text-align: center;
+    display: block;
+    height: 3.7em;
+    width: 100%;
+    font-size: 0.8em;
+    text-decoration: none;
+    padding: 0.5em;
+    color: #2800a0;
+}
+main section article ul li:nth-child(3) a {
+    background: #2800a0;
+    color: #fff;
+    box-shadow: inset 0 -3px 2px 0 rgba(0,0,0,0.70);
+    border-radius: 0 0 0.7em 0;
+    transition: all 0.3s ease-out;
+    padding: 1.1em 1em 1em 1em;
+    font-size: 0.9em;
+}
+main section article ul li:nth-child(1) a:before {
+    font-family: 'Material-Design-Iconic-Font';
+    content: '\f1de';
+    width: 100%;
+    display: block;
+    font-size: 1.4em;
+}
+main section article ul li:nth-child(2) a:before {
+    font-family: 'Material-Design-Iconic-Font';
+    content: '\f265';
+    width: 100%;
+    display: block;
+    font-size: 1.4em;
+}
+main section article ul li:nth-child(3) a:after {
+    font-family: 'Material-Design-Iconic-Font';
+    content: '\f2fb';
+    font-size: 1.4em;
+    position: absolute;
+    top: 13px;
+    padding: 0em 0 0 0.3em;
+}
+main section article ul li:nth-child(3) a:hover {
+    background: #5E40B8;
+    transition: all 0.3s ease-out;
+}
+
+/*===================================================
+Footer
+===================================================*/
+footer {
+    width: 100%;
+    background: #f7f7f7;
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    margin: 0;
+    padding: 1em;
+    font-size: 0.8em;
+    color: #909090;
+}
+
+/*===================================================
+Aanmelden
+===================================================*/
+main#aanmelden{
+    background: url(../images/head_img.jpg) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 94vh;
+    width: 100%;
+}
+
+main#aanmelden section {
+    margin: 10em auto;
+    width: 90%;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 0.750em;
+    display: block;
+}
+
+    @media only screen and (min-width : 30em) {
+        main#aanmelden section {
+            width: 75%;
+        }
+    }
+
+    @media only screen and (min-width : 37.5em) {
+        main#aanmelden section {
+            width: 50%;
+        }
+    }
+    @media only screen and (min-width : 56.25em) {
+        main#aanmelden section {
+            width: 40%;
+        }
+    }
+    @media only screen and (min-width : 60em) {
+        main#aanmelden section {
+            width: 30%;
+        }
+    }
+    @media only screen and (min-width : 68.75em) {
+        main#aanmelden section {
+            width: 27.5%;
+        }
+    }
+
+main#aanmelden section h2 {
+    background: #fff;
+    color: #21d470;
+    border-radius: 0.5em 0.5em 0 0;
+    width: 100%;
+    padding: 1em;
+}
+main#aanmelden section form fieldset legend {
+    display: none;
+}
+
+main#aanmelden section form fieldset {
+    width: 100%;
+    padding: 2em 2em 1em 2em;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
 
+main#aanmelden section form fieldset label {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+main#aanmelden section form fieldset label input {
+    width: 100%;
+    margin-top: 0.5em;
+    border-radius: 0.750em;
+    border: 1px solid #868686;
+    padding: 0.8em;
+    font-size: 0.8em;
+    outline: none;
+    transition: all 0.3s ease-out;
+}
+main#aanmelden section form fieldset label input:focus {
+    border: 1px solid #21d470;
+    transition: all 0.3s ease-out;
+}
+main#aanmelden section form fieldset label:last-of-type {
+    margin: 0;
+}
+main#aanmelden section form fieldset input.btn_pink {
+    position: relative;
+    top: 2.3em;
+    width: auto;
+    margin: auto;
+}
+main#aanmelden section footer {
+    background: #fff;
+    padding: 2.5em 1em 1em 1em;
+    border-radius: 0 0 0.5em 0.5em;
+    flex-wrap: wrap;
+    min-height: 5em;
+}
+main#aanmelden section footer ul {
+    width: 100%;
+    padding: 0em 3em;
+    list-style: none;
+    margin: -0.5em 0em 0em 0em;
+}
+main#aanmelden section footer ul li a {
+    font-size: 0.8em;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    color: #2800a0;
+    text-decoration: none;
+    padding: 0.3em 0em;
+}
+main#aanmelden section footer ul li a:hover {
+    color: #21d470;
+}
+main#aanmelden section footer ul li a:after {
+    font-family: 'Material-Design-Iconic-Font';
+    content: '\f2fb';
+    position: absolute;
+    font-size: 1.4em;
+    right: 0;
+    top: 0.14em;
+}
 /*===================================================
 Detail pagina
 ===================================================*/
-
 #detail article {
     max-width: 60em;
     -webkit-columns: 3;

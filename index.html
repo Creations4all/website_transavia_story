@@ -3,38 +3,34 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Overzicht pagina | Transavia Story's</title>
-
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/material-design-iconic-font.min.css">
 	</head>
 	<body>
-
-	<!-- Header -->
+		<!-- Header -->
 		<header>
 			<div class="container">
 				
-					<div class="logo">
-						<a href="index.html">
-								<img src="images/logo.png" alt="logo Transavia">
-								<h1>story's</h1>
-						</a>
-					</div>
-
-					<!-- Navigatie  opslaan/account -->
-					<nav>
-						<ul>
-							<li><a href="#">opslaan</a></li>
-							<li><a href="pages/aanmelden.html">inloggen</a></li>
-						</ul>
-					</nav>
+				<div class="logo">
+					<a href="index.html">
+						<img src="images/logo.png" alt="logo Transavia">
+						<h1>story's</h1>
+					</a>
+				</div>
+				<!-- Navigatie  bookmark/account -->
+				<nav>
+					<ul>
+						<li><a href="#">bookmark</a></li>
+						<li><a href="pages/inloggen.html">inloggen</a></li>
+					</ul>
+				</nav>
 			</div>
 		</header>
 		<!-- Head afbeelding -->
-				<figure class="head">
-					<img src="images/head_img.jpg" alt="Strand afbeelding op vakantie">
-				</figure>
+		<figure class="head">
+			<img src="images/head_img.jpg" alt="Strand afbeelding op vakantie">
+		</figure>
 		<div class="container">
 			<aside>
 				<!-- Sorteer navigatie -->
@@ -45,84 +41,115 @@
 						<li><a href="#">Trending</a></li>
 					</ul>
 				</nav>
-				<ul>
-					<li><a href="#">Genre</a>
-						<ul>
-							<form>
-								<fieldset>
-									<li><legend>Genre</legend></li>
-									<li><label>Opinie<input type="checkbox" name="opinie" value="opinie"/></label></li>
-									<li><label>Fictie<input type="checkbox" name="fictie" value="fictie"/></label></li>
-									<li><label>Non-fictie<input type="checkbox" name="nonfictie" value="non-fictie"/></label></li>
-									<li><label>Correspondentie<input type="checkbox" name="correspondentie" value="correspondentie"/></label></li>
-									<li><label>Fictie<input type="checkbox" name="fictie" value="fictie"/></label></li>
-									<li><label>Cartoons<input type="checkbox" name="cartoons" value="cartoons"/></label></li>
-								</fieldset>
-							</form>
-						</ul>
-					</li>
-				</ul>
-
-				<!-- tags -->
-				<ul>
-					<li><a href="#">Sport</a></li>
-					<li><a href="#">Stijloefening</a></li>
-					<li><a href="#">Interview</a></li>
-					<li><a href="#">Verhaal</a></li>
-					<li><a href="#">Reis</a></li>
-					<li><a href="#">Vliegtuig</a></li>
-				</ul>
+				
+				<section id="dropdownleft">
+					<h3>Genre</h3>
+					<i class="zmdi zmdi-plus"></i>
+					<div id="downleft">
+						<form>
+							<fieldset>
+								<legend>Genre</legend>
+								<label>Opinie<input type="checkbox" name="opinie" value="opinie"/></label>
+								<label>Fictie<input type="checkbox" name="fictie" value="fictie"/></label><label>Non-fictie<input type="checkbox" name="nonfictie" value="non-fictie"/></label>
+								<label>Correspondentie<input type="checkbox" name="correspondentie" value="correspondentie"/></label>
+								<label>Fictie<input type="checkbox" name="fictie" value="fictie"/></label>
+								<label>Cartoons<input type="checkbox" name="cartoons" value="cartoons"/></label>
+							</fieldset>
+						</form>
+					</div>
+				</section>
+				<section id="dropdownright">
+					<h3>Tags</h3>
+					<i class="zmdi zmdi-plus"></i>
+					<ul id="downright">
+						<li><a href="#">Sport</a></li>
+						<li><a href="#">Stijloefening</a></li>
+						<li><a href="#">Interview</a></li>
+						<li><a href="#">Verhaal</a></li>
+						<li><a href="#">Reis</a></li>
+						<li><a href="#">Vliegtuig</a></li>
+					</ul>
+				</section>
 			</aside>
 			<main>
-				<section>
-					<h2>Aanbevolen voor jou!</h2>
-					<article>
-						<figure>
-							<img src="#" alt="Martin met zijn bril op">
-						</figure>
-						<h3>Martin bril</h3>
-						<p>Centraal Station. Iedereen gaat er naartoe, niemand moet er zijn. Behalve om verder te reizen. Ik stap uit de bus, lijn 21. </p>
-						<ul>
-							<li><a href="#">Like</a></li>
-							<li><a href="#">Opslaan</a></li>
-							<li><a href="pages/detail.html">Lees verder</a></li>
-						</ul>
-					</article>
-					<article>
-						<figure>
-							<img src="#" alt="Gebrek op het plein">
-						</figure>
-						<h3>Het gekbrek</h3>
-						<p>De bus uit. Mijn zoon tukt in zijn kinderkoets. Eindelijk. Ik loop over het plein. Een gierende wind en een striemende miezerregen geselen mijn gezicht.</p>
-						<ul>
-							<li><a href="#">Like</a></li>
-							<li><a href="#">Opslaan</a></li>
-							<li><a href="#">Lees verder</a></li>
-						</ul>
-					</article>
-				</section>
-				<section>
-					<h2>Story's</h2>
-					<article>
-							<figure>
-								<img src="#" alt="Met zijn zoon in de bus">
-							</figure>
-							<h3>Zoon</h3>
-							<p>Vroem. Tuut tuut. Whèèèh!! Die! Die! Whèèèh! Die! Die! Hjumhjumhjum. Zzzzzzzzzz.* Zzzzzzz.** Zzzzzzz. Hjumhjumhjum.</p>
-							<ul>
-								<li><a href="#">Like</a></li>
-								<li><a href="#">Opslaan</a></li>
-								<li><a href="#">Lees verder</a></li>
-							</ul>
-						</article>
-				</section>
-
+			<section>
+				<h2>Aanbevolen voor jou!</h2>
+				<article>
+					<figure>
+						<a href="#">bookmark</a>
+						<img src="images/route.jpg" alt="Met zijn zoon in de bus">
+					</figure>
+					<h3>Toeristische route</h3>
+					<p>Als u naar links kijkt, ziet u het Centraal Station. Gebouwd tussen 1881 en 1889 door architect P.H.J. Cuypers of P.J.H...</p>
+					<ul>
+						<li><a href="#">173</a></li>
+						<li><a href="#">928</a></li>
+						<li><a href="#">Lees verder</a></li>
+					</ul>
+				</article>
+				<article>
+					<figure>
+						<a href="#">bookmark</a>
+						<img src="images/western.jpg" alt="Met zijn zoon in de bus">
+					</figure>
+					<h3>Western</h3>
+					<p>Een stofwolk ontneemt het zicht op de wegrijdende postkoets, die mij net heeft afgezet voor het...</p>
+					<ul>
+						<li><a href="#">173</a></li>
+						<li><a href="#">928</a></li>
+						<li><a href="#">Lees verder</a></li>
+					</ul>
+				</article>
+			</section>
+			<section>
+				<h2>Story's</h2>
+				<article>
+					<figure>
+						<a href="#">bookmark</a>
+						<img src="images/bril.jpg" alt="bril van Martin">
+					</figure>
+					<h3>Martin bril</h3>
+					<p>Centraal Station. Iedereen gaat er naartoe, niemand moet er zijn. Behalve om verder te reizen...</p>
+					<ul>
+						<li><a href="#">435</a></li>
+						<li><a href="#">3432</a></li>
+						<li><a href="pages/detail.html">Lees verder</a></li>
+					</ul>
+				</article>
+				<article>
+					<figure>
+						<a href="#">bookmark</a>
+						<img src="images/beroemd.jpg" alt="Met zijn zoon in de bus">
+					</figure>
+					<h3>Beroemd</h3>
+					<p>Vlak voordat ik de bus uitstap bedank ik de buschauffeur via de spiegel voor zijn diensten...</p>
+					<ul>
+						<li><a href="#">173</a></li>
+						<li><a href="#">928</a></li>
+						<li><a href="#">Lees verder</a></li>
+					</ul>
+				</article>
+				<article>
+					<figure>
+						<a href="#">bookmark</a>
+						<img src="images/gebrek.jpg" alt="Gebrek op het plein">
+					</figure>
+					<h3>Het gekbrek</h3>
+					<p>De bus uit. Mijn zoon tukt in zijn kinderkoets. Eindelijk. Ik loop over het plein. Een gierende wind en een...</p>
+					<ul>
+						<li><a href="#">780</a></li>
+						<li><a href="#">7492</a></li>
+						<li><a href="#">Lees verder</a></li>
+					</ul>
+				</article>
+			</section>
 			</main>
 		</div>
-
 		<!-- Footer -->
 		<footer>
 			<p>All rights reserved copyright 2016 &copy; Transavia</p>
 		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="js/script.js"></script>
 	</body>
 </html>
