@@ -714,12 +714,6 @@ main section article p {
         }
     }
 
-    @media only screen and (min-width: 37.5em) {
-        main section article p{
-            height:5.5em;
-        }
-    }
-
 main section article ul {
     display: flex;
     list-style: none;
@@ -890,12 +884,17 @@ main#aanmelden section form fieldset label input:focus {
 main#aanmelden section form fieldset label:last-of-type {
     margin: 0;
 }
-main#aanmelden section form fieldset input.btn_pink {
+main#aanmelden section form fieldset input[type=submit].btn_pink {
     position: relative;
+    cursor: pointer;
     top: 2.3em;
     width: auto;
     margin: auto;
+    -webkit-appearance: none;
+    -moz-appearance:none;
 }
+
+
 main#aanmelden section footer {
     background: #fff;
     padding: 2.5em 1em 1em 1em;
