@@ -25,3 +25,29 @@ $( "#dropdownright" ).click(function() {
  $( "#dropdownleft" ).click(function() {
   $( "#dropdownleft" ).toggleClass( "active" );
 });
+
+$( "main section article ul li:nth-child(1)" ).click(function() {
+  $(this).find('span').toggleClass( "liked" );
+});
+
+$( "main section article ul li:nth-child(3)" ).click(function() {
+  console.log('hij werkt');
+  $(this).find('span').toggleClass( "bookmark" );
+});
+$('main section article ul li:nth-child(1)').click(function() {
+    if ($(this).find(".liked")[0]){
+      $(this).find('span').html(function(i, val) { return val*1+1 });
+    } else {
+      $(this).find('span').html(function(i, val) { return val*1-1 });
+    }
+});
+
+$('main section article ul li:nth-child(3)').click(function() {
+    if ($(this).find(".bookmark")[0]){
+      $(this).find('span').html(function(i, val) { return val*1+1 });
+    } else {
+      $(this).find('span').html(function(i, val) { return val*1-1 });
+    }
+});
+
+     

@@ -581,15 +581,6 @@ main section{
     width: 100%;
 }
 
-main section:first-of-type {
-    background: #F3E5D8;
-}
-    @media only screen and (min-width : 60em) {
-        main section:first-of-type{
-            background-color:#fff;
-        }
-    }
-
 main section h2 {
     color: #0dd373;
     padding: 0.5em 0 0.5em 0.5em;
@@ -605,6 +596,7 @@ articles
 main section article {
     border-radius: 0.750em;
     margin: 0 0 1.5em 0;
+    height: 23em;
     position: relative;
     width: 100%;
     padding: 1.5%;
@@ -613,6 +605,7 @@ main section article {
     @media only screen and (min-width: 37.5em) {
         main section article{
             width: 50%;
+            height: 20em;
         }
     }
      @media only screen and (min-width : 60em) {
@@ -622,12 +615,13 @@ main section article {
     }
     @media only screen and (min-width : 70em) {
         main section article{
-            width: 33.33%;
+            width: 25%;
+            height: 13em;
         }
 
         main section:first-of-type article{
             width: 50%;
-            height: 20em;
+            height: 21em;
         }
     }
 
@@ -641,21 +635,29 @@ main article picture {
     z-index: 1;
 }
 main article picture img {
-    min-height: 100%;
-    width: 110%;
+    width: 120%;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
-main section article h3 {
+main section:first-of-type article h3 {
+    font-size: 2em;
+}
+main section article h3{
+    font-size: 2em;
     padding: 0.7em;
     color: #fff;
     position: absolute;
     top: 0px;
-    font-size: 1.5em;
+    width: 75%;
     z-index: 10;
 }
+    @media only screen and (min-width: 70em) {
+        main section article h3{
+            font-size: 1.250em;
+        }
+    }
 main section article p {
     padding: 0 1em 1em 1em;
     margin: 0;
@@ -685,38 +687,149 @@ main section article ul li {
     width: 33.33%;
     height: 3.7em;
 }
-main section article ul li a {
+main section article ul li span {
     text-align: center;
     display: block;
     height: 3.7em;
     width: 100%;
     font-size: 0.8em;
     text-decoration: none;
-    padding: 0.5em;
     color: #fff;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    position: relative;
 }
-main section article ul li:nth-child(1) a:before {
+main section article ul li span:before {
     font-family: 'Material-Design-Iconic-Font';
+    width: 100%;
+    padding-bottom: 0.2em;
+    display: block;
+}
+    @media only screen and (min-width : 60em) {
+        main section:first-of-type article ul li:nth-child(1) span:before{
+            font-size: 1.8em;    
+        }
+    }
+
+    @media only screen and (min-width : 60em) {
+        main section:first-of-type article ul li:nth-child(2) span:before{
+            font-size: 1.6em;    
+        }
+    }
+    @media only screen and (min-width : 60em) {
+        main section:first-of-type article ul li:nth-child(3) span:before{
+            font-size: 1.8em;    
+        }
+    }
+
+main section article ul li:nth-child(1) span:before {
     content: '\f1de';
-    width: 100%;
-    display: block;
-    font-size: 1.4em;
-}
-main section article ul li:nth-child(2) a:before {
-    font-family: 'Material-Design-Iconic-Font';
-    content: '\f265';
-    width: 100%;
-    display: block;
-    font-size: 1.4em;
-}
-main section article ul li:nth-child(3) a:before {
-    font-family: 'Material-Design-Iconic-Font';
-    content: '\f11d';
-    width: 100%;
-    display: block;
-    font-size: 1.4em;
+    font-size: 1.8em;
 }
 
+    @media only screen and (min-width : 60em) {
+        main section article ul li:nth-child(1) span:before {
+            font-size: 1.4em;
+        }
+    }
+
+main section article ul li:nth-child(2) span:before {
+    content: '\f265';
+    font-size: 1.6em;
+    padding-top: 0.1em;
+}
+
+    @media only screen and (min-width : 60em) {
+        main section article ul li:nth-child(2) span:before {
+            font-size: 1.3em;
+        }
+    }
+
+main section article ul li:nth-child(3) span:before {
+    content: '\f11d';
+    font-size: 1.8em;
+}
+
+    @media only screen and (min-width : 60em) {
+        main section article ul li:nth-child(3) span:before {
+            font-size: 1.4em;
+        }
+    }
+
+main section article ul li span.bookmark {
+    animation-name: bookmark;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+}
+@keyframes bookmark {
+    0%{
+        bottom: 0px;
+    }
+    50% {
+        bottom: 10px;
+    }
+    100% {
+        bottom: 0px;
+    }
+}
+
+main section article ul li span.liked {
+    animation-name: liked;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+}
+@keyframes liked {
+    0%{
+        -ms-transform: rotate(0deg); /* IE 9 */
+        -webkit-transform: rotate(0deg); /* Safari */
+        transform: rotate(0deg);
+    }
+    50% {
+        -ms-transform: rotate(-20deg); /* IE 9 */
+        -webkit-transform: rotate(-20deg); /* Safari */
+        transform: rotate(-20deg);
+    }
+    100% {
+        -ms-transform: rotate(0deg); /* IE 9 */
+        -webkit-transform: rotate(0deg); /* Safari */
+        transform: rotate(0deg);
+    }
+}
+
+main section article ul li  span.bookmark,
+main section article ul li  span.liked{
+    color: #0DD373;
+}
+
+main section article .share {
+    display: block;
+    position: absolute;
+    right: 2em;
+    top: 1.8em;
+    z-index: 20;
+    cursor: pointer;
+}
+
+    @media only screen and (min-width : 70em) {
+        main section article .share {
+            right: 1em;
+            top: 0.8em;
+        }
+    }   
+
+    @media only screen and (min-width : 70em) {
+        main section:first-of-type article .share {
+            right: 2em;
+            top: 1.8em;
+        }
+    }
+
+main section article .share:before {
+    font-family: 'Material-Design-Iconic-Font';
+    content:'\f35b';
+    font-size: 1.4em;
+    color: #fff;
+}
 /*===================================================
 Footer
 ===================================================*/
