@@ -78,6 +78,10 @@ h3 {
 h4 {
     font-size: 1em
 }
+button{
+    outline: none;
+    cursor: pointer;
+}
 .btn_pink {
     font-size: 1em;
     padding: .75em 2em;
@@ -407,7 +411,7 @@ aside section#dropdownright ul {
 
 aside section {
     width: 50%;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
@@ -420,6 +424,7 @@ aside section {
         aside section{
             padding: 0;
             width:100%;
+            display: flex;
         }
     }
 
@@ -527,26 +532,6 @@ aside section div form fieldset label {
     border-bottom: 1px solid #e2e2e2;
     cursor: pointer;
 }
-label>input[type=checkbox]{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    outline: none;
-    cursor: pointer;
-}
-label>input[type=checkbox]:before {
-    font-family: 'Material-Design-Iconic-Font';
-    content: '\f279';
-    font-size: 1.3em;
-    position:absolute;
-    color: #333;
-    top: 1.3em;
-}
-label>input[type=checkbox]:checked:before {
-    content: '\f26a';
-    color: #0dd373;
-}
-
     @media only screen and (min-width: 60em){
         aside section ul li,
         aside section div form fieldset label {
@@ -554,6 +539,148 @@ label>input[type=checkbox]:checked:before {
         }
     }
 
+aside button {
+    width: 100%;
+    padding: 0.9em;
+    text-align: left;
+    font-size: 1.2em;
+    position: relative;
+    font-family: 'nexa';
+    font-weight: bold;
+    margin-top: 0.2em;
+    border: none;
+    border-bottom: 1px solid #e2e2e2;
+    background: #fff;
+}
+aside button:after {
+    font-family: 'Material-Design-Iconic-Font';
+    content: '\f278';
+    position: absolute;
+    font-size: 1.3em;
+    top: 0.6em;
+    right: 1em;
+}
+    @media only screen and (min-width : 60em) {
+        aside button{
+            display: none;
+        }
+    }
+
+/*===================================================
+mobile filter
+===================================================*/
+
+section#mobile_filter {
+    position: fixed;
+    top: 0;
+    background: #F3F3F3;
+    z-index: 999;
+    height: 100vh;
+    width: 100%;
+    overflow: scroll;
+    padding: 3.7em 0 4em 0;
+    display: none;
+}
+
+section#mobile_filter header {
+    box-shadow: none;
+    position: fixed;
+    border-bottom: 1px solid #ccc;
+    justify-content: space-between;
+}
+
+section#mobile_filter header h2 {
+    padding: 0.6em 0.4em;
+}
+
+section#mobile_filter header i.zmdi.zmdi-close {
+    font-size: 1.8em;
+    padding: 0.6em;
+    cursor: pointer;
+}
+section#mobile_filter form {
+    background: #fff;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+section#mobile_filter form leggend {
+    display: none;
+}
+
+section#mobile_filter form legend {
+    display: none;
+}
+
+section#mobile_filter form label {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    border-bottom: 1px solid #ccc;
+    font-size: 1em;
+}
+
+section#mobile_filter h3 {
+    font-size: 1.2em;
+    padding: 0.5em;
+    color: #7b7b7b;
+}
+section#mobile_filter form label:last-of-type {
+    border-bottom: none;
+}
+section#mobile_filter ul {
+    background: #fff;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+section#mobile_filter ul li {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+section#mobile_filter ul li:last-of-type {
+    border: none;
+}
+section#mobile_filter ul li a {
+    text-decoration: none;
+    font-size: 1em;
+    position: relative;
+    font-weight: normal;
+    color: #333;
+    display: block;
+    padding: 1em;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-out;
+}
+
+section#mobile_filter ul li a:after {
+    font-family: 'Material-Design-Iconic-Font';
+    content: '\f2fb';
+    position: absolute;
+    right: 1em;
+    font-size: 1.4em;
+    top: 0.6em;
+}
+section#mobile_filter button {
+    width: 50%;
+    position: fixed;
+    bottom: 0px;
+    border: 0;
+    font-size: 1.1em;
+    font-family: 'nexa';
+    font-weight: bold;
+    padding: 1em;
+    background: #FF3268;
+    color: #fff;
+}
+section#mobile_filter button:last-of-type {
+    right: 0;
+    background: #0DD373;
+}
+body.filter_active {
+    overflow: hidden;
+}
 /*===================================================
 main
 ===================================================*/

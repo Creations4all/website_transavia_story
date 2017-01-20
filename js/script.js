@@ -50,4 +50,19 @@ $('main section article ul li:nth-child(3)').click(function() {
     }
 });
 
+ $( "aside button" ).click(function() {
+  $( "#mobile_filter" ).fadeIn();
+  $( "body" ).addClass('filter_active');
+});
+
+$( "#close" ).click(function() {
+  $( "#mobile_filter" ).fadeOut();
+  $( "body" ).removeClass('filter_active');
+});
+
+$( "#mobile_filter button:last-of-type" ).click(function() {
+  $( "#mobile_filter" ).fadeOut();
+  $( "body" ).removeClass('filter_active');
+});
+
      

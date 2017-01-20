@@ -60,7 +60,7 @@
 						<li><a href="#">New</a></li>
 					</ul>
 				</nav>
-				
+				<button>Filter</i></button>
 				<section id="dropdownleft">
 					<h3>Genre</h3>
 					<i class="zmdi zmdi-plus"></i>
@@ -88,6 +88,7 @@
 						<li><a href="#">Reis</a></li>
 						<li><a href="#">Vliegtuig</a></li>
 					</ul>
+				</section>
 			</aside>
 		<main>
 			<section>
@@ -242,6 +243,40 @@
 		<footer>
 			<p>All rights reserved copyright 2016 &copy; Transavia</p>
 		</footer>
+
+		<section id="mobile_filter">
+			<header>
+				<h2>Filter</h2>
+				<i id="close" class="zmdi zmdi-close"></i>
+			</header>
+			<section>
+				<h3>Genre</h3>
+					<form>
+						<fieldset>
+							<legend>Genre</legend>
+							<label>Opinie<input type="checkbox" name="opinie" value="opinie"/></label>
+							<label>Fictie<input type="checkbox" name="fictie" value="fictie"/></label><label>Non-fictie<input type="checkbox" name="nonfictie" value="non-fictie"/></label>
+							<label>Correspondentie<input type="checkbox" name="correspondentie" value="correspondentie"/></label>
+							<label>Fictie<input type="checkbox" name="fictie" value="fictie"/></label>
+							<label>Cartoons<input type="checkbox" name="cartoons" value="cartoons"/></label>
+						</fieldset>
+					</form>
+			</section>
+			<section>
+				<h3>Tags</h3>
+				<ul>
+					<li><a href="#">Sport</a></li>
+					<li><a href="#">Stijloefening</a></li>
+					<li><a href="#">Interview</a></li>
+					<li><a href="#">Verhaal</a></li>
+					<li><a href="#">Reis</a></li>
+					<li><a href="#">Vliegtuig</a></li>
+				</ul>
+			</section>
+			<button>Reset</button>
+			<button id="close">33 verhalen</button>
+		</section>
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="js/script.js"></script>
 	</body>
