@@ -1000,22 +1000,18 @@ main#aanmelden section {
 
     @media only screen and (min-width : 37.5em) {
         main#aanmelden section {
-            width: 50%;
-        }
-    }
-    @media only screen and (min-width : 56.25em) {
-        main#aanmelden section {
-            width: 40%;
+            width: 75%;
         }
     }
     @media only screen and (min-width : 60em) {
         main#aanmelden section {
-            width: 30%;
+            width: 67%;
         }
     }
+
     @media only screen and (min-width : 68.75em) {
         main#aanmelden section {
-            width: 27.5%;
+            width: 57%;
         }
     }
 
@@ -1033,15 +1029,26 @@ main#aanmelden section form fieldset legend {
 main#aanmelden section form fieldset {
     width: 100%;
     padding: 2em 2em 1em 2em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
 }
 
 main#aanmelden section form fieldset label {
     width: 100%;
-    margin-bottom: 1em;
+    float: left;
+    padding: 0.3em;
 }
+
+    @media only screen and (min-width : 37.5em) {
+        main#aanmelden section form fieldset label {
+            width: 50%;
+            padding: 0.6em;
+        }
+    }
+
+    @media only screen and (min-width : 60em) {
+        main#aanmelden section form fieldset label {
+            width: 33%;
+        }
+    }
 
 main#aanmelden section form fieldset label input {
     width: 100%;
@@ -1057,17 +1064,15 @@ main#aanmelden section form fieldset label input:focus {
     border: 1px solid #21d470;
     transition: all 0.3s ease-out;
 }
-main#aanmelden section form fieldset label:last-of-type {
-    margin: 0;
-}
 main#aanmelden section form fieldset input[type=submit].btn_pink {
-    position: relative;
     cursor: pointer;
-    top: 2.3em;
-    width: auto;
-    margin: auto;
     -webkit-appearance: none;
     -moz-appearance:none;
+    margin: 0 auto;
+    width: 10em;
+    display: block;
+    position: relative;
+    top: 38px;
 }
 
 
@@ -1104,6 +1109,13 @@ main#aanmelden section footer ul li a:after {
     font-size: 1.4em;
     right: 0;
     top: 0.14em;
+}
+main#aanmelden section form fieldset label:nth-of-type(1) {
+    margin-left: 0;
+}
+
+main#aanmelden section form fieldset label:nth-of-type(4) {
+    margin-left: 0;
 }
 /*===================================================
 Detail pagina
