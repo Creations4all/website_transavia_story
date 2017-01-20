@@ -1002,10 +1002,16 @@ main#aanmelden section {
         main#aanmelden section {
             width: 75%;
         }
+        main#aanmelden.inloggen section {
+            width: 50%;
+        }
     }
     @media only screen and (min-width : 60em) {
         main#aanmelden section {
             width: 67%;
+        }
+        main#aanmelden.inloggen section {
+            width: 35%;
         }
     }
 
@@ -1013,7 +1019,17 @@ main#aanmelden section {
         main#aanmelden section {
             width: 57%;
         }
+        main#aanmelden.inloggen section {
+            width: 27%;
+        }
+
     }
+
+    
+
+main.inloggen section label {
+    width: 100% !important;
+}
 
 main#aanmelden section h2 {
     background: #fff;
@@ -1118,14 +1134,35 @@ main#aanmelden section form fieldset label:nth-of-type(4) {
     margin-left: 0;
 }
 /*===================================================
-Detail pagina
+verhalen
 ===================================================*/
-#detail article {
-    max-width: 60em;
-    -webkit-columns: 3;
-    -moz-columns: 3;
-    columns: 3;
-    -webkit-column-gap: 2em;
-    -moz-column-gap: 2em;
-    column-gap: 2em;
+main#story{
+    width: 100%;
 }
+main#story img {
+    width: 100%;
+    display: none;
+}
+main#story img.mobile{
+    display: block;
+}
+     @media only screen and (min-width : 48em) {
+        
+        main#story img.tablet{
+            display: block;
+        }
+        main#story img.mobile,
+        main#story img.desktop{
+            display: none;
+        }
+    }
+
+    @media only screen and (min-width : 60em) {
+        main#story img.desktop{
+            display: block;
+        }
+        main#story img.mobile,
+        main#story img.tablet{
+            display: none;
+        }
+    }
