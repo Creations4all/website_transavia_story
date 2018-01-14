@@ -60,27 +60,28 @@
 						<li><a href="#">New</a></li>
 					</ul>
 				</nav>
-				<button>Filter</i></button>
-				<section id="dropdownleft">
-					<h3>Genre</h3>
-					<i class="zmdi zmdi-plus"></i>
-					<div id="downleft">
-						<form>
-							<fieldset>
-								<legend>Genre</legend>
-								<label>Opinie<input type="checkbox" name="opinie" value="opinie"/></label>
-								<label>Fictie<input type="checkbox" name="fictie" value="fictie"/></label><label>Non-fictie<input type="checkbox" name="nonfictie" value="non-fictie"/></label>
-								<label>Correspondentie<input type="checkbox" name="correspondentie" value="correspondentie"/></label>
-								<label>Fictie<input type="checkbox" name="fictie" value="fictie"/></label>
-								<label>Cartoons<input type="checkbox" name="cartoons" value="cartoons"/></label>
-							</fieldset>
-						</form>
-					</div>
+				<button id="filter_button">Filter</button>
+				<section class="toggle-content">
+					
+						<h3>Genre</h3>
+						<i class="zmdi zmdi-plus"></i>
+						<div class="hidden-content slide-up_genre">
+							<form>
+								<fieldset>
+									<legend>Genre</legend>
+									<label>Opinie<input type="checkbox" name="opinie" value="opinie"/></label>
+									<label>Fictie<input type="checkbox" name="fictie" value="fictie"/></label><label>Non-fictie<input type="checkbox" name="nonfictie" value="non-fictie"/></label>
+									<label>Correspondentie<input type="checkbox" name="correspondentie" value="correspondentie"/></label>
+									<label>Fictie<input type="checkbox" name="fictie" value="fictie"/></label>
+									<label>Cartoons<input type="checkbox" name="cartoons" value="cartoons"/></label>
+								</fieldset>
+							</form>
+						</div>
 				</section>
-				<section id="dropdownright">
+				<section class="toggle-content_tags">
 					<h3>Tags</h3>
 					<i class="zmdi zmdi-plus"></i>
-					<ul id="downright">
+					<ul class="hidden-content_tags slide-up_tags">
 						<li><a href="#">Sport</a></li>
 						<li><a href="#">Stijloefening</a></li>
 						<li><a href="#">Interview</a></li>
@@ -102,9 +103,9 @@
 						<h3>Hongerwinter</h3>
 					</a>
 					<ul>
-						<li><span>173</span></li>
+						<li><span class="like">173</span></li>
 						<li><span>928</span></li>
-						<li><span>234</span></li>
+						<li><span class="bookmark_none">234</span></li>
 					</ul>
 				</article>
 				<article>
@@ -116,9 +117,9 @@
 						<h3>Stoned</h3>
 					</a>
 					<ul>
-						<li><span>173</span></li>
+						<li><span class="like">173</span></li>
 						<li><span>928</span></li>
-						<li><span>234</span></li>
+						<li><span class="bookmark_none">234</span></li>
 					</ul>
 				</article>
 			</section>
@@ -133,9 +134,9 @@
 						<h3>Martin bril</h3>
 					</a>
 					<ul>
-						<li><span>435</span></li>
+						<li><span class="like">435</span></li>
 						<li><span>3432</span></li>
-						<li><span>2331</span></li>
+						<li><span class="bookmark_none">2331</span></li>
 					</ul>
 				</article>
 				<article>
@@ -147,9 +148,9 @@
 						<h3>Beroemd</h3>
 					</a>
 					<ul>
-						<li><span>173</span></li>
+						<li><span class="like">173</span></li>
 						<li><span>928</span></li>
-						<li><span>232</span></li>
+						<li><span class="bookmark_none">232</span></li>
 					</ul>
 				</article>
 				<article>
@@ -161,9 +162,9 @@
 						<h3>Het gekbrek</h3>
 					</a>
 					<ul>
-						<li><span>780</span></li>
+						<li><span class="like">780</span></li>
 						<li><span>7492</span></li>
-						<li><span>2332</span></li>
+						<li><span class="bookmark_none">2332</span></li>
 					</ul>
 				</article>
 				<article>
@@ -175,9 +176,9 @@
 						<h3>Neerslachtig</h3>
 					</a>
 					<ul>
-						<li><span>435</span></li>
+						<li><span class="like">435</span></li>
 						<li><span>3432</span></li>
-						<li><span>2331</span></li>
+						<li><span class="bookmark_none">2331</span></li>
 					</ul>
 				</article>
 				<article>
@@ -189,9 +190,9 @@
 						<h3>Western</h3>
 					</a>
 					<ul>
-						<li><span>173</span></li>
+						<li><span class="like">173</span></li>
 						<li><span>928</span></li>
-						<li><span>232</span></li>
+						<li><span class="bookmark_none">232</span></li>
 					</ul>
 				</article>
 				<article>
@@ -203,9 +204,9 @@
 						<h3>Johan Cruijff</h3>
 					</a>
 					<ul>
-						<li><span>780</span></li>
+						<li><span class="like">780</span></li>
 						<li><span>7492</span></li>
-						<li><span>2332</span></li>
+						<li><span class="bookmark_none">2332</span></li>
 					</ul>
 				</article>
 				<article>
@@ -217,9 +218,9 @@
 						<h3>Touristische Route</h3>
 					</a>
 					<ul>
-						<li><span>173</span></li>
+						<li><span class="like">173</span></li>
 						<li><span>928</span></li>
-						<li><span>232</span></li>
+						<li><span class="bookmark_none">232</span></li>
 					</ul>
 				</article>
 				<article>
@@ -231,9 +232,9 @@
 						<h3>Paranoia</h3>
 					</a>
 					<ul>
-						<li><span>780</span></li>
+						<li><span class="like">780</span></li>
 						<li><span>7492</span></li>
-						<li><span>2332</span></li>
+						<li><span class="bookmark_none">2332</span></li>
 					</ul>
 				</article>
 			</section>
@@ -244,7 +245,7 @@
 			<p>All rights reserved copyright 2016 &copy; Transavia</p>
 		</footer>
 
-		<section id="mobile_filter">
+		<section id="mobile_filter" class="is-hidden">
 			<header>
 				<h2>Filter</h2>
 				<i id="close" class="zmdi zmdi-close"></i>
@@ -274,10 +275,8 @@
 				</ul>
 			</section>
 			<button>Reset</button>
-			<button id="close">33 verhalen</button>
+			<button id="submit">33 verhalen</button>
 		</section>
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="js/script.js"></script>
+		<script src="js/script_v2.js"></script>
 	</body>
 </html>

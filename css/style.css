@@ -408,6 +408,20 @@ Aside dropdown navigation
 aside section#dropdownright ul {
     display: none;
 }
+.slide-up_tags, .slide-down_tags,
+.slide-up_genre, .slide-down_genre {
+    max-height: 0;            
+    overflow-y: hidden;
+    -webkit-transition: max-height 0.5s ease-in-out;
+    -moz-transition: max-height 0.5s ease-in-out;
+    -o-transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.5s ease-in-out;
+}
+.slide-down_tags,
+.slide-down_genre {
+    max-height: 20em;
+}
+
 
 aside section {
     width: 50%;
@@ -416,7 +430,7 @@ aside section {
     justify-content: space-between;
     align-items: center;
     padding: 1em;
-    border-bottom: 1px solid #e2e2e2;
+    border-bottom:none;
     cursor: pointer;
 }
 
@@ -454,6 +468,7 @@ aside section i:before {
 aside section i{
     transition: all 0.3s ease-out;
 }
+
 aside section.active i{
     transition: all 0.3s ease-out;
     transform: rotate(+45deg);
@@ -575,11 +590,18 @@ section#mobile_filter {
     top: 0;
     background: #F3F3F3;
     z-index: 999;
+    opacity: 0;
     height: 100vh;
+    display: block;
     width: 100%;
     overflow: scroll;
     padding: 3.7em 0 4em 0;
-    display: none;
+}
+
+.is-hidden {
+    display: none !important;
+    z-index: 0 !important;
+    opacity: 0 !important;
 }
 
 section#mobile_filter header {
@@ -602,10 +624,6 @@ section#mobile_filter form {
     background: #fff;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-}
-
-section#mobile_filter form leggend {
-    display: none;
 }
 
 section#mobile_filter form legend {
@@ -681,6 +699,9 @@ section#mobile_filter button:last-of-type {
 body.filter_active {
     overflow: hidden;
 }
+
+
+
 /*===================================================
 main
 ===================================================*/

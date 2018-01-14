@@ -31,9 +31,12 @@ $( "main section article ul li:nth-child(1)" ).click(function() {
 });
 
 $( "main section article ul li:nth-child(3)" ).click(function() {
-  console.log('hij werkt');
   $(this).find('span').toggleClass( "bookmark" );
 });
+
+
+
+
 $('main section article ul li:nth-child(1)').click(function() {
     if ($(this).find(".liked")[0]){
       $(this).find('span').html(function(i, val) { return val*1+1 });
@@ -50,19 +53,5 @@ $('main section article ul li:nth-child(3)').click(function() {
     }
 });
 
- $( "aside button" ).click(function() {
-  $( "#mobile_filter" ).fadeIn();
-  $( "body" ).addClass('filter_active');
-});
-
-$( "#close" ).click(function() {
-  $( "#mobile_filter" ).fadeOut();
-  $( "body" ).removeClass('filter_active');
-});
-
-$( "#mobile_filter button:last-of-type" ).click(function() {
-  $( "#mobile_filter" ).fadeOut();
-  $( "body" ).removeClass('filter_active');
-});
 
      
